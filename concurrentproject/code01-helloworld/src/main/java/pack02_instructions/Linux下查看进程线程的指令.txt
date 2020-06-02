@@ -1,0 +1,11 @@
+Java自带命令：
+    jps：查看所有java进程
+    jstack [pid]：查看该pid进程下所有线程状态（某一刻，快照）
+
+
+Linux中：
+    top 查看进程，按 P 按照CPU占用率排名
+    top -H -p [pid] 查看某进程中的线程状态
+
+
+也可以使用 JConsole 来监控本地 或 远程 java程序的运行
