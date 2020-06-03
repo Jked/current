@@ -7,8 +7,8 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2020/6/3 16:53
  * @intro 说明使用 wait - notify 的最佳实践
  */
-@Slf4j(topic = "jk.BestPractice")
-public class BestPractice {
+@Slf4j(topic = "jk.Code01_BestPractice")
+public class Code01_BestPractice {
 
     // 锁对象
     private static final Object room = new Object();
