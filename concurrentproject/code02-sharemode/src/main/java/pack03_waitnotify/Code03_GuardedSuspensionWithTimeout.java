@@ -19,19 +19,19 @@ public class Code03_GuardedSuspensionWithTimeout {
 
     public static void main(String[] args) throws InterruptedException {
 
-        GuardeObjectWithTimeout gurade = new GuardeObjectWithTimeout();
+        GuardedObjectWithTimeout guarded = new GuardedObjectWithTimeout();
 
         // 消费线程
         new Thread(() -> {
             log.debug("begin");
-            log.debug("获取到产品：{}", gurade.getResponse(3000));
+            log.debug("获取到产品：{}", guarded.getResponse(3000));
         }, "consumer").start();
 
 
         Thread.sleep(2000);
         // 生产线程
         new Thread(() -> {
-            gurade.setResponse("精品卫衣");
+            guarded.setResponse("精品卫衣");
 //            gurade.setResponse(null);  // 测试虚假唤醒，查看等待时间是否足够
         }, "producer").start();
 
@@ -42,8 +42,8 @@ public class Code03_GuardedSuspensionWithTimeout {
  * 用于传递结果的 中间对象
  * 优化：增加等待超时时间
  */
-@Slf4j(topic = "jk.GuardeObject")
-class GuardeObjectWithTimeout {
+@Slf4j(topic = "jk.GuardedObject")
+class GuardedObjectWithTimeout {
 
     private Object response;
 

@@ -9,6 +9,9 @@ import lombok.extern.slf4j.Slf4j;
  * 用于 一个线程 需要接收 另一个线程 产生的结果，因为需要等待结果，所以是同步的一种设计模式
  * JDK中的 join 和 Future 就是使用的这样模式
  * <p>
+ * 如何理解 保护性暂停？
+ *      暂停就是指的 wait() ，当条件不满足时，通过 wait() 进行等待，直到条件满足，这就是 保护性暂停
+ * <p>
  * 注意：
  * 只适用于一个结果的生产和消费；
  * 如果有结果源源不断的从一个线程到另一个线程，应该使用 生产者 / 消费者 模式
@@ -23,7 +26,7 @@ public class Code02_GuardedSuspension {
 
     public static void main(String[] args) throws InterruptedException {
 
-        GuardeObject gurade = new GuardeObject();
+        GuardedObject gurade = new GuardedObject();
 
         // 消费线程
         new Thread(() -> {
@@ -43,8 +46,8 @@ public class Code02_GuardedSuspension {
 /**
  * 用于传递结果的 中间对象
  */
-@Slf4j(topic = "jk.GuardeObject")
-class GuardeObject {
+@Slf4j(topic = "jk.GuardedObject")
+class GuardedObject {
 
     private Object response;
 
