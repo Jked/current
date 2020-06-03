@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * @author 怀风
  * @date 2020/6/3 11:19
- * @intro 转账问题
+ * @intro 线程互斥--转账问题
  */
 @Slf4j(topic = "jk.Code01_AccountTest")
 public class Code01_AccountTest {
