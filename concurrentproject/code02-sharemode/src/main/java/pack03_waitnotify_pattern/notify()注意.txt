@@ -1,0 +1,4 @@
+执行 notify() 或者 notifyAll() 只是唤醒wait()的线程，如果本线程还没有执行完 synchronized 块中的代码，它不会释放锁。
+所以，唤醒只是让 等待中线程 从 wait set 中转移到 entry list 中；
+
+等synchronized块里代码执行完锁释放开之后， entry list 中的线程才会重新竞争锁！
