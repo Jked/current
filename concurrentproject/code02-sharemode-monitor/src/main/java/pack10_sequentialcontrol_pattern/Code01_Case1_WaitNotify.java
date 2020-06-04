@@ -7,7 +7,7 @@ import org.junit.Test;
  * @ClassName Code01_Case1_WaitNotify
  * @Author JK
  * @Date 2020/6/4 17:45
- * @Description 两个线程，一个打印 1  ，另一个打印 2；
+ * @Description 案例一：两个线程，一个打印 1  ，另一个打印 2；
  * 控制打印顺序，要求：先打印2 ，再打印1
  * <p>
  * wait - notify 版本

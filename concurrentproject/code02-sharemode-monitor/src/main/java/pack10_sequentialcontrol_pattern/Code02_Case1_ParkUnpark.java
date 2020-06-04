@@ -8,7 +8,7 @@ import java.util.concurrent.locks.LockSupport;
  * @ClassName Code02_Case1_ParkUnpark
  * @Author JK
  * @Date 2020/6/4 18:00
- * @Description 控制打印顺序，要求：先打印2 ，再打印1
+ * @Description 案例一：控制打印顺序，要求：先打印2 ，再打印1
  * <p>
  * park - unpark 版本
  */

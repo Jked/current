@@ -10,7 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>code01-helloworld</module>
-        <module>code02-sharemode</module>
+        <module>code02-sharemode-monitor</module>
+        <module>code03-sharemode-jmm</module>
     </modules>
 
     <properties>
