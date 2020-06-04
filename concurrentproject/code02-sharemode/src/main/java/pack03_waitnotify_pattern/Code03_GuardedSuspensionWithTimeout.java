@@ -1,4 +1,4 @@
-package pack03_waitnotify;
+package pack03_waitnotify_pattern;
 
 import lombok.extern.slf4j.Slf4j;
 
