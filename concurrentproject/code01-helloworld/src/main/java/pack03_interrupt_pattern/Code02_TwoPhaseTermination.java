@@ -1,4 +1,4 @@
-package pack03_interrupt;
+package pack03_interrupt_pattern;
 
 import lombok.extern.slf4j.Slf4j;
 

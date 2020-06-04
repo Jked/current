@@ -1,4 +1,4 @@
-package pack03_interrupt;
+package pack03_interrupt_pattern;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -14,7 +14,7 @@ import java.util.concurrent.locks.LockSupport;
  * LockSupport.park() 方法只能执行一次，一旦打断并恢复线程执行后，再调用一次 LockSupport.park() 也不会让线程暂停
  * 因为 打断标记已经是 true 了
  *
- * 要想要第二次打断继续生效，需要将打断标记设为 false，比如使用：interrupted()
+ * 要想要第二次打断继续生效，需要将打断标记设为 false，比如使用静态方法：interrupted()
  */
 @Slf4j(topic = "jk.Code03_InterruptPark")
 public class Code03_InterruptPark {
